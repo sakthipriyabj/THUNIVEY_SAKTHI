@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Thunivey Sakthi — Women's Cyber Safety Platform</title>
+  <link rel="stylesheet" href="/static/css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+<canvas id="particle-canvas"></canvas>
+
+<!-- ══════════════ NAVBAR ══════════════ -->
+<nav class="navbar">
+  <div class="nav-brand">
+    <div class="nav-logo"><i class="fas fa-shield-halved"></i></div>
+    <div>
+      <span class="brand-name">Thunivey Sakthi</span>
+      <span class="brand-tamil">துணிவே சக்தி</span>
+    </div>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="#url-checker"  class="nav-link"><i class="fas fa-link"></i>        <span data-i18n="nav_url">URL Check</span></a></li>
+    <li><a href="#text-scanner" class="nav-link"><i class="fas fa-envelope"></i>    <span data-i18n="nav_scam">Scam Detect</span></a></li>
+    <li><a href="#screenshot"   class="nav-link"><i class="fas fa-camera"></i>      <span data-i18n="nav_ss">Screenshot</span></a></li>
+    <li><a href="#voice-check"  class="nav-link"><i class="fas fa-microphone"></i>  <span data-i18n="nav_voice">Voice</span></a></li>
+    <li><a href="#scam-map"     class="nav-link"><i class="fas fa-map"></i>         <span data-i18n="nav_map">Alert Map</span></a></li>
+    <li><a href="#chatbot"      class="nav-link"><i class="fas fa-robot"></i>       <span data-i18n="nav_chat">AI Chat</span></a></li>
+  </ul>
+
+  <div class="nav-right">
+    <div class="lang-sw">
+      <button class="lb on"  onclick="setLang('en')">EN</button>
+      <button class="lb"     onclick="setLang('ta')">த</button>
+      <button class="lb"     onclick="setLang('hi')">हि</button>
+      <button class="lb"     onclick="setLang('te')">తె</button>
+    </div>
+    <button class="sos-btn" id="emergencyBtn">
+      <i class="fas fa-exclamation-triangle"></i>
+      <span data-i18n="sos">SOS HELP</span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-pill">
+      <span class="live-dot"></span>
+      <span data-i18n="hero_pill">Women's Cyber Safety Platform · India</span>
+    </div>
+    <h1 class="hero-h1">
+      <span data-i18n="hero_h1a">Detect.</span><br>
+      <span data-i18n="hero_h1b">Protect.</span><br>
+      <span class="accent" data-i18n="hero_h1c">Stay Safe.</span>
+    </h1>
+    <p class="hero-p" data-i18n="hero_p">
+    </p>
+    <div class="cta-row">
+      <a href="#url-checker" class="btn-red"><i class="fas fa-shield-alt"></i> <span data-i18n="cta1">Start Scanning</span></a>
+      <a href="#chatbot" class="btn-outline"><i class="fas fa-robot"></i> <span data-i18n="cta2">Ask Cyber Sakthi</span></a>
+    </div>
+    <div class="hero-stats">
+      <div>
+      <div>
+
+  <div class="hero-features">
+    <a href="#url-checker" class="hf-card">
+      <div class="hf-icon ic-r"><i class="fas fa-link"></i></div>
+      <div><div class="hf-name" data-i18n="f1_name">URL Phishing Detection</div><div class="hf-sub" data-i18n="f1_sub">Heuristic + domain analysis</div></div>
+      <i class="fas fa-arrow-right hf-arrow"></i>
+    </a>
+    <a href="#text-scanner" class="hf-card">
+      <div class="hf-icon ic-a"><i class="fas fa-envelope-open-text"></i></div>
+      <div><div class="hf-name" data-i18n="f2_name">Email & SMS Scam Detector</div><div class="hf-sub" data-i18n="f2_sub">NLP pattern scoring</div></div>
+      <i class="fas fa-arrow-right hf-arrow"></i>
+    </a>
+    <a href="#screenshot" class="hf-card">
+      <div class="hf-icon ic-b"><i class="fas fa-camera-retro"></i></div>
+      <div><div class="hf-name" data-i18n="f3_name">Screenshot Analysis</div><div class="hf-sub" data-i18n="f3_sub">AI visual phishing scan</div></div>
+      <i class="fas fa-arrow-right hf-arrow"></i>
+    </a>
+    <a href="#voice-check" class="hf-card">
+      <div class="hf-icon ic-g"><i class="fas fa-microphone-alt"></i></div>
+      <div><div class="hf-name" data-i18n="f4_name">Voice URL Checker</div><div class="hf-sub" data-i18n="f4_sub">Speak URL, hear verdict</div></div>
+      <i class="fas fa-arrow-right hf-arrow"></i>
+    </a>
+    <a href="#scam-map" class="hf-card">
+      <div class="hf-icon ic-p"><i class="fas fa-map-marked-alt"></i></div>
+      <div><div class="hf-name" data-i18n="f5_name">Live Scam Alert Map</div><div class="hf-sub" data-i18n="f5_sub">India-wide threat monitor</div></div>
+      <i class="fas fa-arrow-right hf-arrow"></i>
+    </a>
+    <a href="#chatbot" class="hf-card">
+      <div class="hf-icon ic-r"><i class="fas fa-robot"></i></div>
+      <div><div class="hf-name" data-i18n="f6_name">AI Chatbot — Cyber Sakthi</div><div class="hf-sub" data-i18n="f6_sub">24/7 cybersecurity advisor</div></div>
+      <i class="fas fa-arrow-right hf-arrow"></i>
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════ CAPABILITIES ══════════════ -->
+<div class="sec-alt">
+  <div class="sec-inner">
+    <div class="sec-label" data-i18n="cap_tag">CAPABILITIES</div>
+    <h2 class="sec-h" data-i18n="cap_h">Complete Cyber Protection Suite</h2>
+    <p class="sec-p" data-i18n="cap_p">Six integrated tools working together to keep you protected from every angle of digital threat.</p>
+    <div class="cap-grid reveal">
+      <div class="cap-card" onclick="location.href='#url-checker'">
+        <div class="cap-no">01</div>
+        <div class="cap-icon ic-r"><i class="fas fa-link"></i></div>
+        <div class="cap-title" data-i18n="f1_name">URL Phishing Detection</div>
+        <div class="cap-body" data-i18n="f1_desc">Heuristic analysis detects malicious URLs — checks domain structure, TLS, impersonation patterns and suspicious keywords.</div>
+      </div>
+      <div class="cap-card" onclick="location.href='#text-scanner'">
+        <div class="cap-no">02</div>
+        <div class="cap-icon ic-a"><i class="fas fa-envelope-open-text"></i></div>
+        <div class="cap-title" data-i18n="f2_name">Email & SMS Scam Detection</div>
+        <div class="cap-body" data-i18n="f2_desc">AI-powered text analysis identifies scam phrases, social engineering attempts and financial fraud patterns.</div>
+      </div>
+      <div class="cap-card" onclick="location.href='#screenshot'">
+        <div class="cap-no">03</div>
+        <div class="cap-icon ic-b"><i class="fas fa-camera-retro"></i></div>
+        <div class="cap-title" data-i18n="f3_name">Screenshot Analysis</div>
+        <div class="cap-body" data-i18n="f3_desc">Upload any suspicious webpage screenshot for instant AI-powered phishing and fraud visual analysis.</div>
+      </div>
+      <div class="cap-card" onclick="location.href='#voice-check'">
+        <div class="cap-no">04</div>
+        <div class="cap-icon ic-g"><i class="fas fa-microphone-alt"></i></div>
+        <div class="cap-title" data-i18n="f4_name">Voice URL Checker</div>
+        <div class="cap-body" data-i18n="f4_desc">Speak any URL and receive an instant audio safety verdict. No typing required — fully accessible.</div>
+      </div>
+      <div class="cap-card" onclick="location.href='#scam-map'">
+        <div class="cap-no">05</div>
+        <div class="cap-icon ic-p"><i class="fas fa-map-marked-alt"></i></div>
+        <div class="cap-title" data-i18n="f5_name">Real-Time Scam Alert Map</div>
+        <div class="cap-body" data-i18n="f5_desc">Live heatmap of active cyber threats across India — know which cities are under attack right now.</div>
+      </div>
+      <div class="cap-card" onclick="location.href='#chatbot'">
+        <div class="cap-no">06</div>
+        <div class="cap-icon ic-r"><i class="fas fa-robot"></i></div>
+        <div class="cap-title" data-i18n="f6_name">AI Chatbot — Cyber Sakthi</div>
+        <div class="cap-body" data-i18n="f6_desc">24/7 intelligent advisor for cybersecurity guidance, scam prevention and emergency support.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ URL CHECKER ══════════════ -->
+<div class="sec" id="url-checker">
+  <div class="sec-label">TOOL 01</div>
+  <h2 class="sec-h" data-i18n="url_h">URL Phishing Detector</h2>
+  <p class="sec-p" data-i18n="url_p">Paste any suspicious URL below to instantly check if it's safe or a threat.</p>
+
+  <div class="tool-card reveal">
+    <div class="tool-card-head">
+      <div class="tool-head-icon ic-r"><i class="fas fa-link"></i></div>
+      <div>
+        <h2 data-i18n="url_h">URL Phishing Detector</h2>
+        <p data-i18n="url_p_short">Paste any suspicious URL to check if it's safe</p>
+      </div>
+    </div>
+    <div class="tool-body">
+      <div class="url-row">
+        <span class="row-icon"><i class="fas fa-globe"></i></span>
+        <input type="text" id="urlInput" class="url-input" data-i18n-ph="url_ph" placeholder="https://suspicious-site.com/login"/>
+        <button class="btn-go" id="urlScanBtn" onclick="checkURL()">
+          <i class="fas fa-search"></i> <span data-i18n="btn_scan">Scan URL</span>
+        </button>
+      </div>
+      <div class="chip-bar">
+        <span class="chip-lbl" data-i18n="try_ex">Try:</span>
+        <button class="chip" onclick="fillEx('url','http://paypal-secure-verify.xyz/login?update=true')" data-i18n="ex_pay">Fake PayPal</button>
+        <button class="chip" onclick="fillEx('url','http://192.168.1.1/bank-login')" data-i18n="ex_ip">IP URL</button>
+        <button class="chip" onclick="fillEx('url','https://google.com')" data-i18n="ex_safe">Safe URL</button>
+        <button class="chip" onclick="fillEx('url','hjdd123')" data-i18n="ex_junk">Gibberish</button>
+      </div>
+      <div id="urlResult" class="result-panel"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ TEXT SCANNER ══════════════ -->
+<div class="sec-alt" id="text-scanner">
+  <div class="sec-inner">
+    <div class="sec-label">TOOL 02</div>
+    <h2 class="sec-h" data-i18n="text_h">Email / SMS Scam Detector</h2>
+    <p class="sec-p" data-i18n="text_p">Paste suspicious message content to analyse it for scam patterns.</p>
+
+    <div class="tool-card reveal">
+      <div class="tool-card-head">
+        <div class="tool-head-icon ic-a"><i class="fas fa-envelope-open-text"></i></div>
+        <div>
+          <h2 data-i18n="text_h">Email / SMS Scam Detector</h2>
+          <p data-i18n="text_p_short">Paste suspicious email or SMS content for analysis</p>
+        </div>
+      </div>
+      <div class="tool-body">
+        <textarea id="textInput" class="textarea-inp" data-i18n-ph="text_ph" placeholder="Paste suspicious email or SMS here..."></textarea>
+        <div class="chip-bar" style="margin-bottom:.85rem">
+          <button class="btn-sec" id="textScanBtn" onclick="checkText()">
+            <i class="fas fa-search"></i> <span data-i18n="btn_analyze">Analyze Text</span>
+          </button>
+          <button class="chip" data-i18n="ex_scam" onclick="fillEx('text','Congratulations! Click here to claim now. Urgent action required. Send your bank details and OTP to verify account.')">Scam Sample</button>
+          <button class="chip" data-i18n="ex_safe_sms" onclick="fillEx('text','Hi, your order #12345 has been shipped. Track it at amazon.com/orders. Expected delivery: 3 days.')">Safe Sample</button>
+        </div>
+        <div id="textResult" class="result-panel"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ SCREENSHOT ══════════════ -->
+<div class="sec" id="screenshot">
+  <div class="sec-label">TOOL 03</div>
+  <h2 class="sec-h" data-i18n="ss_h">Screenshot Phishing Detector</h2>
+  <p class="sec-p" data-i18n="ss_p">Upload a screenshot of any suspicious page for instant AI visual analysis.</p>
+
+  <div class="tool-card reveal">
+    <div class="tool-card-head">
+      <div class="tool-head-icon ic-b"><i class="fas fa-camera-retro"></i></div>
+      <div>
+        <h2 data-i18n="ss_h">Screenshot Phishing Detector</h2>
+        <p data-i18n="ss_p_short">AI analysis of suspicious website screenshots</p>
+      </div>
+    </div>
+    <div class="tool-body">
+      <div class="upload-zone" id="uploadZone" onclick="document.getElementById('fileInput').click()">
+        <i class="fas fa-cloud-upload-alt up-icon"></i>
+        <p class="up-title" data-i18n="up_title">Drop screenshot here or click to upload</p>
+        <p class="up-sub" data-i18n="up_sub">PNG, JPG, JPEG, WEBP — max 10 MB</p>
+        <input type="file" id="fileInput" accept="image/*" style="display:none" onchange="handleUpload(event)"/>
+      </div>
+      <div id="ssPreview"></div>
+      <div id="ssResult" class="result-panel"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ VOICE ══════════════ -->
+<div class="sec-alt" id="voice-check">
+  <div class="sec-inner">
+    <div class="sec-label">TOOL 04</div>
+    <h2 class="sec-h" data-i18n="voice_h">Voice-Based URL Checker</h2>
+    <p class="sec-p" data-i18n="voice_p">Speak any URL aloud and receive an instant audio safety verdict.</p>
+
+    <div class="tool-card reveal">
+      <div class="tool-card-head">
+        <div class="tool-head-icon ic-g"><i class="fas fa-microphone-alt"></i></div>
+        <div>
+          <h2 data-i18n="voice_h">Voice-Based URL Checker</h2>
+          <p data-i18n="voice_p_short">Speak a URL and get instant audio safety feedback</p>
+        </div>
+      </div>
+      <div class="tool-body">
+        <div class="voice-center">
+          <button class="mic-btn" id="micBtn" onclick="toggleVoice()">
+            <i class="fas fa-microphone" id="micIcon" style="font-size:1.5rem"></i>
+            <span class="mic-lbl" id="micText" data-i18n="mic_tap">TAP TO SPEAK</span>
+          </button>
+          <div style="text-align:center">
+            <div class="wav" id="voiceWav">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <p id="voiceTranscript" data-i18n="voice_prompt" style="margin-top:.6rem">Click the microphone and speak a URL...</p>
+          </div>
+        </div>
+        <div id="voiceResult" class="result-panel"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ SCAM MAP ══════════════ -->
+<div class="sec" id="scam-map">
+  <div class="sec-label" data-i18n="map_tag">LIVE THREAT MAP</div>
+  <h2 class="sec-h" data-i18n="map_h">Real-Time Scam Alert Map</h2>
+  <p class="sec-p" data-i18n="map_p">Live cyber threat hotspots across India — updated continuously.</p>
+
+  <div class="map-grid reveal">
+    <div>
+      <div class="map-frame">
+        <svg id="indiaSvg" viewBox="0 0 600 650" class="india-map"></svg>
+        <canvas id="mapCanvas" class="map-canvas"></canvas>
+      </div>
+      <div class="map-legend">
+        <div class="leg"><span class="leg-d" style="background:#e8445a"></span><span data-i18n="leg_c">Critical</span></div>
+        <div class="leg"><span class="leg-d" style="background:#f59e0b"></span><span data-i18n="leg_h">High</span></div>
+        <div class="leg"><span class="leg-d" style="background:#3b82f6"></span><span data-i18n="leg_m">Medium</span></div>
+        <div class="leg"><span class="leg-d" style="background:#22c55e"></span><span data-i18n="leg_l">Low</span></div>
+      </div>
+    </div>
+    <div class="alert-col">
+      <h4 data-i18n="alerts_title">Active Alerts</h4>
+      <div class="alert-scroll" id="alertList"></div>
+      <div class="alert-total" id="alertTotal"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ CHATBOT ══════════════ -->
+<div class="sec-alt" id="chatbot">
+  <div class="sec-inner">
+    <div class="sec-label">AI ASSISTANT</div>
+    <h2 class="sec-h" data-i18n="chat_h">Cyber Sakthi — AI Advisor</h2>
+    <p class="sec-p" data-i18n="chat_p">Ask anything about cybersecurity, scam prevention, or get emergency guidance instantly.</p>
+
+    <div class="chat-shell reveal">
+      <div class="chat-msgs" id="chatMsgs">
+        <div class="msg bot">
+          <div class="msg-av av-bot"><i class="fas fa-robot"></i></div>
+          <div class="msg-bub">
+            <p data-i18n="bot_greet">Vanakkam! 🌸 I'm <strong>Cyber Sakthi</strong>, your AI cybersecurity assistant. Ask me about phishing, OTP scams, password safety, or UPI fraud.</p>
+            <span class="msg-time" data-i18n="just_now">Just now</span>
+          </div>
+        </div>
+      </div>
+      <div class="chat-chips">
+        <button class="chat-chip" onclick="sendQuick('What is phishing?')" data-i18n="qp1">What is phishing?</button>
+        <button class="chat-chip" onclick="sendQuick('How to stay safe from OTP scams?')" data-i18n="qp2">OTP Scam Safety</button>
+        <button class="chat-chip" onclick="sendQuick('UPI fraud tips')" data-i18n="qp3">UPI Safety</button>
+        <button class="chat-chip" onclick="sendQuick('emergency help')" data-i18n="qp4">Emergency Help</button>
+      </div>
+      <div class="chat-input-row">
+        <input type="text" id="chatInput" data-i18n-ph="chat_ph" placeholder="Ask Cyber Sakthi anything..." onkeydown="if(event.key==='Enter')sendChat()"/>
+        <button class="chat-send" onclick="sendChat()"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo-box"><i class="fas fa-shield-halved"></i></div>
+      <div class="footer-brand-name">Thunivey Sakthi</div>
+      <p class="footer-brand-p" data-i18n="footer_p">துணிவே சக்தி<br>Empowering Women with Cyber Safety</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title" data-i18n="footer_hl_title">Helplines</div>
+      <p><span data-i18n="footer_h1">Cybercrime:</span> <span class="footer-hl">1930</span></p>
+      <p><span data-i18n="footer_h2">Women's:</span> <span class="footer-hl">181</span></p>
+      <p><span data-i18n="footer_h3">Police:</span> <span class="footer-hl">100</span></p>
+      <p>cybercrime.gov.in</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title" data-i18n="footer_tools">Tools</div>
+      <a href="#url-checker"  data-i18n="nav_url">URL Check</a>
+      <a href="#text-scanner" data-i18n="nav_scam">Scam Detect</a>
+      <a href="#screenshot"   data-i18n="nav_ss">Screenshot</a>
+      <a href="#voice-check"  data-i18n="nav_voice">Voice</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title" data-i18n="footer_more">More</div>
+      <a href="#scam-map" data-i18n="nav_map">Alert Map</a>
+      <a href="#chatbot"  data-i18n="nav_chat">AI Chat</a>
+      <a href="#" onclick="document.getElementById('emergencyModal').classList.add('open');return false">SOS Help</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-i18n="footer_copy">© 2025 Thunivey Sakthi · Women's Cyber Safety Hackathon · Made for Digital India</span>
+    <span>Flask + Vanilla JS</span>
+  </div>
+</footer>
+
+<!-- ══════════════ EMERGENCY MODAL ══════════════ -->
+<div class="modal-bg" id="emergencyModal">
+  <div class="modal-box">
+    <div class="modal-head">
+      <span class="sos-badge">SOS</span>
+      <h2 data-i18n="modal_h">Emergency Cyber Help</h2>
+      <button class="modal-close" onclick="document.getElementById('emergencyModal').classList.remove('open')">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <p class="modal-desc" data-i18n="modal_desc">If you're experiencing a cyber attack or online harassment, contact these helplines immediately:</p>
+    <div class="hl-grid">
+      <a href="tel:1930" class="hl-card"><i class="fas fa-shield-alt"></i><div><strong>1930</strong><span data-i18n="modal_h1">National Cybercrime Helpline</span></div></a>
+      <a href="tel:181"  class="hl-card"><i class="fas fa-female"></i><div><strong>181</strong><span data-i18n="modal_h2">Women's Helpline</span></div></a>
+      <a href="tel:100"  class="hl-card"><i class="fas fa-car"></i><div><strong>100</strong><span data-i18n="modal_h3">Police Emergency</span></div></a>
+      <a href="https://cybercrime.gov.in" target="_blank" class="hl-card"><i class="fas fa-globe"></i><div><strong>cybercrime.gov.in</strong><span data-i18n="modal_h4">Online Complaint Portal</span></div></a>
+    </div>
+    <div class="modal-steps">
+      <div class="modal-steps-title" data-i18n="modal_steps_title">Immediate Steps</div>
+      <ul>
+        <li data-i18n="ms1">Do NOT click any more suspicious links</li>
+        <li data-i18n="ms2">Change your passwords immediately</li>
+        <li data-i18n="ms3">Take screenshots as evidence</li>
+        <li data-i18n="ms4">Report to cybercrime helpline: 1930</li>
+        <li data-i18n="ms5">Contact your bank if financial fraud occurred</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="toast-wrap" id="toastWrap"></div>
+<script src="/static/js/main.js"></script>
+</body>
+</html>
